@@ -3,6 +3,7 @@
   <div id="nav">
     <router-link to="/Cat">Cat</router-link>|
     <router-link to="/Dog">Dog</router-link>
+    <div @click="sendBeacon">Manual Send</div>
   </div>
   <router-view />
 </template>
@@ -27,7 +28,7 @@ export default {
     sendBeacon() {
       navigator.sendBeacon(
         "http://localhost:8000/beacon",
-        JSON.stringify(this.store.logs)
+        JSON.stringify(store.state.logs)
       );
     }
   }
