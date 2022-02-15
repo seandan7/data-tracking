@@ -10,7 +10,6 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import store from "@/store";
-import webgazer from "webgazer";
 
 export default {
   name: "App",
@@ -26,7 +25,6 @@ export default {
   },
   methods: {
     sendBeacon() {
-      console.log(webgazer)
       navigator.sendBeacon(
         "http://localhost:8000/beacon",
         JSON.stringify(this.store.logs)
