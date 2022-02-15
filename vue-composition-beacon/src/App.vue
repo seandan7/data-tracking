@@ -1,9 +1,8 @@
 <template>
   <HelloWorld msg="Dev Talks" />
   <div id="nav">
-    <router-link to="/Cat">Cat</router-link>|
+    <router-link to="/Cat">Cat</router-link> |
     <router-link to="/Dog">Dog</router-link>
-    <div @click="sendBeacon">Manual Send</div>
   </div>
   <router-view />
 </template>
